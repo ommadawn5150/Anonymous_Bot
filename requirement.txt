@@ -1,0 +1,12 @@
+from email import message
+from textwrap import indent
+import discord
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import requests
+import os
+import datetime
+import json
+import uuid
+from discord.ext import commands
