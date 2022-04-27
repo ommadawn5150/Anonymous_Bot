@@ -1,7 +1,7 @@
 discord
 numpy
 pandas
-matplotlib.pyplot
+matplotlib
 requests
 datetime
 json
