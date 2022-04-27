@@ -1,6 +1,4 @@
 # インストールした discord.py を読み込む
-from email import message
-from textwrap import indent
 import discord
 import numpy as np
 import pandas as pd
