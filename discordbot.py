@@ -89,7 +89,6 @@ async def on_message(message):
     print('TIME:',time)
     zorome = discord.File("./zoro.jpg")
     nanasi = '名無しのロッ研部員'
-    if message.author.id == 694153858531983360: 
     	
 
     if message.author.bot:
