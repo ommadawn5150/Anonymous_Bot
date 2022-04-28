@@ -88,6 +88,9 @@ async def on_message(message):
     print('ID:',id)
     print('TIME:',time)
     zorome = discord.File("./zoro.jpg")
+    nanasi = '名無しのロッ研部員'
+    if message.author.id == 694153858531983360: 
+    	
 
     if message.author.bot:
         return
@@ -124,7 +127,7 @@ async def on_message(message):
             json.dump(settings, f, indent = 2)
 
         if message.attachments:
-            await anonymous_channel.send( '---------------------------------\n' + str(res_num) +   '  Date: ' +  time + '  ID:' + str(id) + '\n' + message.content + '\n')
+            await anonymous_channel.send( '---------------------------------\n' + str(res_num) + ' '  + str(nanasi) +' Date: ' +  time + '  ID:' + str(id) + '\n' + message.content + '\n')
 
             for i in message.attachments:
                 if i.url.endswith(('png','jpg','jpeg','MOV','mp4')):
@@ -134,7 +137,7 @@ async def on_message(message):
             
             
         else:
-            await anonymous_channel.send( '---------------------------------\n' + str(res_num) +   '  Date: ' +  time + '  ID:' + str(id) + '\n' + message.content +'\n---------------------------------')
+            await anonymous_channel.send( '---------------------------------\n' + str(res_num) +  ' '+  str(nanasi) +   ' Date: ' +  time + '  ID:' + str(id) + '\n' + message.content +'\n---------------------------------')
 
 
 
