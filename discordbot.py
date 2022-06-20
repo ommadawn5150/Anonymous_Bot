@@ -126,7 +126,7 @@ async def on_message(message):
             json.dump(settings, f, indent = 2)
 
         if message.attachments:
-            await anonymous_channel.send( '---------------------------------\n' + str(res_num) + ' '  + nanasi +' Date: ' +  time + '  ID:' + str(id) + '\n' + message.content + '\n')
+            await anonymous_channel.send( '---------------------------------\n'  + nanasi +' Date: ' +  time + '  ID:' + str(id) + '\n' + message.content + '\n')
 
             for i in message.attachments:
                 if i.url.endswith(('png','jpg','jpeg','MOV','mp4')):
@@ -136,7 +136,7 @@ async def on_message(message):
             
             
         else:
-            await anonymous_channel.send( '---------------------------------\n' + str(res_num) +  ' '+  nanasi +   ' Date: ' +  time + '  ID:' + str(id) + '\n' + message.content +'\n---------------------------------')
+            await anonymous_channel.send( '---------------------------------\n'  +  nanasi +   ' Date: ' +  time + '  ID:' + str(id) + '\n' + message.content +'\n---------------------------------')
 
 
 
