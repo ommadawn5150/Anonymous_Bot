@@ -84,14 +84,35 @@ async def on_message(message):
     if message.content == '/shazo':
         await message.channel.send('https://livedoor.blogimg.jp/sokudokuex/imgs/3/e/3e597c3d.jpg')
     if message.content == '/neko':
-        if message.author.id % 2 == 1:
-            await message.channel.send('. ∧∧\n(,,ﾟДﾟ)' )
-        elif message.author.id % 2 == 0:
-            await message.channel.send('. ∧ ∧\n(*ﾟーﾟ)' )
+
+        print(int(str(time)[-2:]))
+
+        if int(str(time)[-2:]) % 11 == 0:
+            await message.channel.send(file = zorome)
+        elif message.author.id == 452110228465647636: 
+            await message.channel.send('ﾝﾈｹﾁｬﾝ')
+        elif message.author.id == 694153858531983360: 
+            await message.channel.send('院試勉強しろ')
+        elif message.author.id == 654507064370003980: 
+            await message.channel.send('任侠')
+        else:
+            if message.author.id % 2 == 1:
+                await message.channel.send('. ∧∧\n(,,ﾟДﾟ)' )
+            elif message.author.id % 2 == 0:
+                await message.channel.send('. ∧ ∧\n(*ﾟーﾟ)' )
 
     if message.author.bot:
         return
     elif type(message.channel) == discord.DMChannel and client.user == message.channel.me:
+    
+        with open('./settings.json') as settings_json:
+            settings = json.load(settings_json)
+            res_num = settings['res_num']
+            settings['res_num'] = res_num + 1
+        
+        with open('./settings.json', 'w') as f:
+            json.dump(settings, f, indent = 2)
+
         if message.attachments:
             await anonymous_channel.send( '---------------------------------\n'  + nanasi + ' ID:' + str(id) + '\n' + message.content + '\n')
 
@@ -104,6 +125,7 @@ async def on_message(message):
             
         else:
             await anonymous_channel.send( '---------------------------------\n'  +  nanasi +   ' Date: ' +  time + '  ID:' + str(id) + '\n' + message.content +'\n---------------------------------')
+
 
 # Botの起動とDiscordサーバーへの接続
 client.run(TOKEN)

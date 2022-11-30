@@ -105,5 +105,6 @@ async def on_message(message):
         else:
             await anonymous_channel.send( '---------------------------------\n'  +  nanasi +   ' Date: ' +  time + '  ID:' + str(id) + '\n' + message.content +'\n---------------------------------')
 
+
 # Botの起動とDiscordサーバーへの接続
 client.run(TOKEN)
