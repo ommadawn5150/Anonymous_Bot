@@ -11,8 +11,8 @@ import uuid
 from discord.ext import commands
 
 # 自分のBotのアクセストークンに置き換えてください
-TOKEN = 'OTYwNDM0ODMxNDUwMzI5MTM5.YkqYow.1jfylloENJpaadFaJEuxeCa43b8'
-CHANNEL_ID = 960456624823210005
+TOKEN = ''
+CHANNEL_ID = #int
 intents=discord.Intents.all()
 intents.typing = False  # typingを受け取らないように
 intents.members = True  # membersを受け取る
