@@ -12,7 +12,8 @@ from discord.ext import commands
 
 # 自分のBotのアクセストークンに置き換えてください
 TOKEN = ''
-CHANNEL_ID = 222 #int
+CHANNEL_ID = 222 #int　匿名のチャンネルの場所
+NANASI_NAME
 intents=discord.Intents.all()
 intents.typing = False 
 intents.members = True
@@ -75,7 +76,7 @@ async def on_message(message):
     print('ID:',id)
     print('TIME:',time)
     zorome = discord.File("./zoro.jpg")
-    nanasi = '名無しのロッ研部員'
+    nanasi = NANASI_NAME
     	
 
     if message.author.bot:
