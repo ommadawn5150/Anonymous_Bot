@@ -14,8 +14,8 @@ from discord.ext import commands
 TOKEN = ''
 CHANNEL_ID = 222 #int
 intents=discord.Intents.all()
-intents.typing = False  # typingを受け取らないように
-intents.members = True  # membersを受け取る
+intents.typing = False 
+intents.members = True
 # 接続に必要なオブジェクトを生成
 client = discord.Client(intents = intents)
 bot = commands.Bot(intents,command_prefix='$')
@@ -28,10 +28,9 @@ async def help(ctx):
     await ctx.send('匿名ちゃんねるに設定したいチャンネルのidを/ set_channel idという風に書くことでそのチャンネルに設定できます。\n匿名ちゃんねるはanonymous botに書き込み内容を直接DMすることでレスできます。')
 
 
-# 起動時に動作する処理
+
 @client.event
 async def on_ready():
-    # 起動したらターミナルにログイン通知が表示される
     print('Logined')
 
 
