@@ -80,8 +80,6 @@ async def on_message(message):
 
     if message.author.bot:
         return
-    if message.content == '/shazo':
-        await message.channel.send('https://livedoor.blogimg.jp/sokudokuex/imgs/3/e/3e597c3d.jpg')
     if message.content == '/neko':
         if message.author.id % 2 == 1:
             await message.channel.send('. ∧∧\n(,,ﾟДﾟ)' )
